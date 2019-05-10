@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		6A15381D228142DC00E5B3CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A15381C228142DC00E5B3CF /* AppDelegate.swift */; };
-		6A15381F228142DC00E5B3CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A15381E228142DC00E5B3CF /* ViewController.swift */; };
-		6A153822228142DD00E5B3CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A153820228142DC00E5B3CF /* Main.storyboard */; };
+		6A15381F228142DC00E5B3CF /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A15381E228142DC00E5B3CF /* MainController.swift */; };
 		6A153824228142DE00E5B3CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A153823228142DE00E5B3CF /* Assets.xcassets */; };
 		6A153827228142DE00E5B3CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A153825228142DE00E5B3CF /* LaunchScreen.storyboard */; };
+		6A153831228143F800E5B3CF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A153830228143F800E5B3CF /* Coordinator.swift */; };
+		6A1538332281455E00E5B3CF /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1538322281455E00E5B3CF /* MainCoordinator.swift */; };
+		6A18A07F2285604200DC9DE9 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A18A07E2285604200DC9DE9 /* BuyViewController.swift */; };
+		6A18A0812285604B00DC9DE9 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A18A0802285604B00DC9DE9 /* CreateAccountViewController.swift */; };
+		6A18A0832285684E00DC9DE9 /* BuyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A18A0822285684E00DC9DE9 /* BuyCoordinator.swift */; };
+		6A18A0852285685800DC9DE9 /* CreateAccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A18A0842285685800DC9DE9 /* CreateAccountCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6A153819228142DC00E5B3CF /* CoordinatorAdvance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoordinatorAdvance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A15381C228142DC00E5B3CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6A15381E228142DC00E5B3CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6A153821228142DC00E5B3CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6A15381E228142DC00E5B3CF /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		6A153823228142DE00E5B3CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A153826228142DE00E5B3CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A153828228142DE00E5B3CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A153830228143F800E5B3CF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		6A1538322281455E00E5B3CF /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		6A18A07E2285604200DC9DE9 /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
+		6A18A0802285604B00DC9DE9 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		6A18A0822285684E00DC9DE9 /* BuyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCoordinator.swift; sourceTree = "<group>"; };
+		6A18A0842285685800DC9DE9 /* CreateAccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,35 @@
 		6A15381B228142DC00E5B3CF /* CoordinatorAdvance */ = {
 			isa = PBXGroup;
 			children = (
+				6A15382F2281435A00E5B3CF /* ViewControllers */,
+				6A15382E2281435400E5B3CF /* Coordinators */,
 				6A15381C228142DC00E5B3CF /* AppDelegate.swift */,
-				6A15381E228142DC00E5B3CF /* ViewController.swift */,
-				6A153820228142DC00E5B3CF /* Main.storyboard */,
 				6A153823228142DE00E5B3CF /* Assets.xcassets */,
 				6A153825228142DE00E5B3CF /* LaunchScreen.storyboard */,
 				6A153828228142DE00E5B3CF /* Info.plist */,
 			);
 			path = CoordinatorAdvance;
+			sourceTree = "<group>";
+		};
+		6A15382E2281435400E5B3CF /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				6A153830228143F800E5B3CF /* Coordinator.swift */,
+				6A1538322281455E00E5B3CF /* MainCoordinator.swift */,
+				6A18A0822285684E00DC9DE9 /* BuyCoordinator.swift */,
+				6A18A0842285685800DC9DE9 /* CreateAccountCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		6A15382F2281435A00E5B3CF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6A15381E228142DC00E5B3CF /* MainController.swift */,
+				6A18A07E2285604200DC9DE9 /* BuyViewController.swift */,
+				6A18A0802285604B00DC9DE9 /* CreateAccountViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +155,6 @@
 			files = (
 				6A153827228142DE00E5B3CF /* LaunchScreen.storyboard in Resources */,
 				6A153824228142DE00E5B3CF /* Assets.xcassets in Resources */,
-				6A153822228142DD00E5B3CF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,22 +165,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A15381F228142DC00E5B3CF /* ViewController.swift in Sources */,
+				6A18A0812285604B00DC9DE9 /* CreateAccountViewController.swift in Sources */,
+				6A15381F228142DC00E5B3CF /* MainController.swift in Sources */,
+				6A18A07F2285604200DC9DE9 /* BuyViewController.swift in Sources */,
+				6A1538332281455E00E5B3CF /* MainCoordinator.swift in Sources */,
+				6A18A0832285684E00DC9DE9 /* BuyCoordinator.swift in Sources */,
 				6A15381D228142DC00E5B3CF /* AppDelegate.swift in Sources */,
+				6A18A0852285685800DC9DE9 /* CreateAccountCoordinator.swift in Sources */,
+				6A153831228143F800E5B3CF /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6A153820228142DC00E5B3CF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6A153821228142DC00E5B3CF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6A153825228142DE00E5B3CF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -283,12 +311,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MDQYT5L674;
 				INFOPLIST_FILE = CoordinatorAdvance/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dev.coordinatorAdvance.CoordinatorAdvance;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.coordinatorAdvance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -300,12 +329,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MDQYT5L674;
 				INFOPLIST_FILE = CoordinatorAdvance/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dev.coordinatorAdvance.CoordinatorAdvance;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.coordinatorAdvance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
