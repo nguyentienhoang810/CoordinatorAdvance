@@ -23,9 +23,4 @@ class CreateAccountViewController: UIViewController {
         mainTitle.text = "Create Account"
         mainTitle.textColor = .black
     }
-
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        coordinator?.didFinishCreateAccount()
-    }
 }

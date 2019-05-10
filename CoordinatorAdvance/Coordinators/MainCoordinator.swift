@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainCoordinator: Coordinator {
+class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     var childCoordinators = [Coordinator]()
     var navigator: UINavigationController
 
@@ -17,6 +17,7 @@ class MainCoordinator: Coordinator {
     }
 
     func start() {
+        navigator.delegate = self
         let vc = MainController()
         vc.coordinator = self
         navigator.pushViewController(vc, animated: false)
@@ -34,6 +35,29 @@ class MainCoordinator: Coordinator {
         childCoordinators.append(child)
         child.parentCoordinator = self
         child.start()
+    }
+
+    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+        guard let fromVC = navigationController.transitionCoordinator?.viewController(forKey: .from) else {
+            return
+        }
+//        guard let toVC = navigationController.transitionCoordinator?.viewController(forKey: .to) else {
+//            return
+//        }
+        //check navigation controller contains VC or not
+        if navigationController.viewControllers.contains(fromVC) {
+            return
+        }
+
+        if let buyViewController = fromVC as? BuyViewController {
+            //this mean pop from buy viewController
+            //remove index of coordinator
+            childDidFinish(buyViewController.coordinator!)
+        }
+
+        if let createAccountViewController = fromVC as? CreateAccountViewController {
+            childDidFinish(createAccountViewController.coordinator!)
+        }
     }
 
     func childDidFinish(_ child: Coordinator) {

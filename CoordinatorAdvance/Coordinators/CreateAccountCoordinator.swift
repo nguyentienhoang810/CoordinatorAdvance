@@ -22,9 +22,5 @@ class CreateAccountCoordinator: Coordinator {
         vc.coordinator = self
         navigator.pushViewController(vc, animated: true)
     }
-
-    func didFinishCreateAccount() {
-        parentCoordinator?.childDidFinish(self)
-    }
 }
 
