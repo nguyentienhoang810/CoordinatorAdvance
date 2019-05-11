@@ -41,9 +41,12 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
         guard let fromVC = navigationController.transitionCoordinator?.viewController(forKey: .from) else {
             return
         }
-//        guard let toVC = navigationController.transitionCoordinator?.viewController(forKey: .to) else {
-//            return
-//        }
+        guard let toVC = navigationController.transitionCoordinator?.viewController(forKey: .to) else {
+            return
+        }
+        print("from: ", fromVC)
+        print("to: ", toVC)
+
         //check navigation controller contains VC or not
         if navigationController.viewControllers.contains(fromVC) {
             return

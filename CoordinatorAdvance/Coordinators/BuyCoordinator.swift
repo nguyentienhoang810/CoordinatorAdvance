@@ -22,4 +22,10 @@ class BuyCoordinator: Coordinator {
         vc.coordinator = self
         navigator.pushViewController(vc, animated: true)
     }
+
+    func gotoDetail() {
+        let vc = DetailViewController()
+        vc.coordinator = self
+        navigator.pushViewController(vc, animated: true)
+    }
 }

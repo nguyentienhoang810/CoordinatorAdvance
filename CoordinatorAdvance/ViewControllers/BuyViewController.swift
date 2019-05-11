@@ -13,6 +13,7 @@ class BuyViewController: UIViewController {
     weak var coordinator: BuyCoordinator?
 
     private let mainTitle = UILabel()
+    private let detailBtn = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,22 @@ class BuyViewController: UIViewController {
         mainTitle.sizeToFit()
         mainTitle.text = "Buy"
         mainTitle.textColor = .black
+
+        view.addSubview(detailBtn)
+        detailBtn.backgroundColor = .black
+        detailBtn.setTitle("Detail", for: .normal)
+        detailBtn.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            detailBtn.heightAnchor.constraint(equalToConstant: 40),
+            detailBtn.widthAnchor.constraint(equalToConstant: 200),
+            detailBtn.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            detailBtn.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            ])
+        detailBtn.addTarget(self, action: #selector(gotoDetail), for: .touchUpInside)
+    }
+
+    @objc func gotoDetail() {
+        coordinator?.gotoDetail()
     }
 }
 
